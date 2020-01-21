@@ -2,6 +2,7 @@
 <template>
   <div>
     <h2>{{ item.title }}</h2>
+    <p>{{ item.income }}</p>
     <div v-html="$md.render(item.body)"></div>
   </div>
 </template>
