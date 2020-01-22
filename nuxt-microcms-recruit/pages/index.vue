@@ -2,7 +2,7 @@
 <template>
   <div>
     <div v-for="item in items">
-      <nuxt-link :to="'carrers/' + item.id">
+      <nuxt-link :to="'careers/' + item.id">
         <h2>
           {{ item.name }}
         </h2>
