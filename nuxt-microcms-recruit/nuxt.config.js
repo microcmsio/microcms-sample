@@ -47,6 +47,31 @@ export default {
   env: {
     API_KEY
   },
+  generate: {
+    routes() {
+      const careers = axios
+        .get("https://your.microcms.io/api/v1/careers", {
+          headers: { "X-API-KEY": process.env.API_KEY }
+        })
+        .then(res => {
+          return res.data.contents.map(career => {
+            return "/careers/" + career.id;
+          });
+        });
+      const posts = axios
+        .get("https://your.microcms.io/api/v1/posts", {
+          headers: { "X-API-KEY": process.env.API_KEY }
+        })
+        .then(res => {
+          return res.data.contents.map(post => {
+            return "/careers/posts/" + post.id;
+          });
+        });
+      return Promise.all([careers, posts]).then(values => {
+        return values.join().split(",");
+      });
+    }
+  },
   /*
    ** Build configuration
    */
