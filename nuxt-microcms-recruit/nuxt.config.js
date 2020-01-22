@@ -1,5 +1,6 @@
 require("dotenv").config();
 const { API_KEY } = process.env;
+const axios = require("axios");
 
 export default {
   mode: "universal",
