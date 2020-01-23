@@ -24,7 +24,7 @@ export default {
 
   async asyncData({ params }) {
     const { data } = await axios.get(
-      `https://your.microcms.io/api/v1/posts?filters=career[contains]${params.id}`,
+      `https://your.microcms.io/api/v1/posts?filters=careers[equals]${params.id}`,
       {
         headers: { "X-API-KEY": process.env.API_KEY }
       }
