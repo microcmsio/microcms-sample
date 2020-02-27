@@ -1,0 +1,17 @@
+---
+layout: default
+title: Hello
+---
+
+<h1>トップページです</h1>
+
+<ul>
+  {% for item in site.data.news %}
+  <li>
+    <a href="/news/{{ item.id }}">
+      <img src="{{ item.image.url }}?h=100" />
+      {{item.title}}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
