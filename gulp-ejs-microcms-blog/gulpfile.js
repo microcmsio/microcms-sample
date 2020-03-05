@@ -15,7 +15,6 @@ gulp.task("server", () => {
 
 // SCSSコンパイル
 gulp.task("style", () => {
-  console.log("style");
   return gulp
     .src("src/styles/**/*.scss")
     .pipe(sass())
@@ -25,7 +24,6 @@ gulp.task("style", () => {
 
 // EJSコンパイル
 gulp.task("ejs", () => {
-  console.log("ejs");
   return request({
     url: "https://example.microcms.io/api/v1/gulp-blog",
     method: "GET",
@@ -64,5 +62,7 @@ gulp.task("watch", () => {
   gulp.watch("src/styles/**/*.scss", gulp.task("style"));
   gulp.watch("src/ejs/**/*.ejs", gulp.task("ejs"));
 });
+
 gulp.task("default", gulp.parallel("server", "watch"));
+
 gulp.task("build", gulp.parallel("style", "ejs"));
