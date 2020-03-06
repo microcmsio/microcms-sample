@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>記事一覧</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    記事一覧
+    <ul>
+      <% contents.forEach((content) => { %>
+      <li><a href="/blog/<%= content.id %>"><%= content.title %></a></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
