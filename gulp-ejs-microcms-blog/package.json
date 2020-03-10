@@ -15,6 +15,6 @@
     "gulp-ejs": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
-    "request-promise": "^4.2.5"
+    "node-fetch": "^2.6.0"
   }
 }
