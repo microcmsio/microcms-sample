@@ -1,7 +1,9 @@
-# Gulp + ejs + microCMSによって静的HTML生成を行うサンプル
+# Gulp + EJS + microCMSによって静的HTML生成を行うサンプル
 
-GulpからmicroCMSのAPIを呼び出し、そのレスポンスをejsに渡してHTMLを生成します。  
+GulpからmicroCMSのAPIを呼び出し、そのレスポンスをEJSに渡してHTMLを生成します。  
 microCMSからNetlify等とWebhookで連携すればJamstack構成も実現できます。
+
+参考記事： https://microcms.io/blog/gulp-ejs-microcms/
 
 # How to use
 
