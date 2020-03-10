@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const ejs = require("gulp-ejs");
 const sass = require("gulp-sass");
 const rename = require("gulp-rename");
-const request = require("request-promise");
+const fetch = require("node-fetch");
 const browser = require("browser-sync");
 
 // サーバー起動
@@ -24,14 +24,15 @@ gulp.task("style", () => {
 
 // EJSコンパイル
 gulp.task("ejs", () => {
-  return request({
-    url: "https://example.microcms.io/api/v1/gulp-blog",
-    method: "GET",
-    headers: {
-      "X-API-KEY": "dc59f358-4622-471f-8d1e-6c7a6f969558"
-    }
-  }).then(res => {
-    const data = JSON.parse(res);
+  return fetch(
+    "https://example.microcms.io/api/v1/gulp-blog",
+    {
+      headers: {
+        "X-API-KEY": "dc59f358-4622-471f-8d1e-6c7a6f969558"
+      }
+    })
+  .then(res => res.json())
+  .then(data => {
 
     // 記事ページ
     for (const item of data.contents) {
