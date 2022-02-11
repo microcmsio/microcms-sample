@@ -33,7 +33,7 @@
     "@types/polka": "^0.5.1",
     "autoprefixer": "^10.2.1",
     "dotenv": "^8.2.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "postcss": "^8.2.4",
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^7.0.0",
