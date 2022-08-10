@@ -1,0 +1,32 @@
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.appeal {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 40px;
+  text-align: center;
+}
+
+.count {
+  color: #999;
+}
+
+.button {
+  border: none;
+  background-color: #563BC8;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.textButton {
+  border: none;
+  color: #563BC8;
+  font-weight: bold;
+  margin-top: 20px;
+}
